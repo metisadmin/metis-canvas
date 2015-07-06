@@ -1,0 +1,20 @@
+.Panel {
+  background: #fff;
+}
+.is-open {
+  &.Panel--top {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Panel--right {
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Panel--bottom {
+    box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Panel--left {
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
+  }
+}
+.Content .Panel.is-open {
+    box-shadow: none;
+}

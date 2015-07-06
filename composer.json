@@ -1,0 +1,21 @@
+{
+  "name": "metisadmin/metis-canvas",
+  "description": "metis admin canvas",
+  "keywords": [
+    "admin",
+    "canvas"
+  ],
+  "homepage": "https://github.com/metisadmin/metis-canvas",
+  "authors": [{
+    "name": "Osman Nuri Okumus",
+    "email": "onokumus@gmail.com",
+    "homepage": "http://onokumus.com"
+  }],
+  "support": {
+    "issues": "https://github.com/metisadmin/metis-canvas/issues"
+  },
+  "license": "MIT",
+  "suggest": {
+    "metisadmin/metis-layout": ">=0.1.3"
+  }
+}

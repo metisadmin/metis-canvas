@@ -1,0 +1,108 @@
+.Canvas {
+  transition: transform 0.5s ease-out;
+  position: absolute;
+  z-index: 1000;
+  overflow-y: auto;
+  &.is-open {
+    z-index: 1001;
+  }
+}
+
+/* Direction */
+.Canvas--top,
+.Canvas--bottom,
+.Canvas--left {
+  left: 0;
+}
+.Canvas--right {
+  right: 0;
+}
+.Canvas--top,
+.Canvas--right,
+.Canvas--left {
+  top: 0;
+}
+.Canvas--left,
+.Canvas--right,
+.Canvas--bottom {
+  bottom: 0;
+}
+
+/* Sizing */
+.Canvas--top,
+.Canvas--right,
+.Canvas--bottom,
+.Canvas--left {
+  width: 100%;
+}
+.Canvas--top,
+.Canvas--bottom {
+  height: 100%;
+  max-height: @canvasDimension;
+}
+.Canvas--right,
+.Canvas--left {
+  max-width: @canvasDimension;
+}
+.Canvas.is-fixed {
+  position: fixed;
+}
+.Content > .Canvas.is-open {
+  position: relative;
+  z-index: 999;
+}
+.Canvas--left {
+  transform: translateX(-@canvasDimension);
+}
+.Canvas--right {
+  transform: translateX(@canvasDimension);
+}
+.Canvas--top {
+  transform: translateY(-@canvasDimension);
+}
+.Canvas--bottom {
+  display: none;
+  &.is-open {
+      display: block;
+  }
+}
+.Canvas--left,
+.Canvas--right {
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+.Canvas--top,
+.Canvas--bottom {
+  &.is-open {
+    transform: translateY(0);
+  }
+}
+
+.Canvas--left,
+.Canvas--right {
+  &.is-mini {
+    max-width: 50px;
+  }
+}
+
+.Canvas {
+  background: #fff;
+}
+.is-open {
+  &.Canvas--top {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Canvas--right {
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Canvas--bottom {
+    box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
+  }
+  &.Canvas--left {
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
+  }
+}
+.Content > .Canvas.is-open {
+    box-shadow: none;
+}
