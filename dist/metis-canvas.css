@@ -1,110 +1,89 @@
 /**
-* metis-canvas v0.1.4
+* metis-canvas v0.1.5
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2015
 * Licensed under MIT
 */
 
-.Canvas {
+.canvas {
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   overflow-y: auto;
 }
-.Canvas.is-open {
-  z-index: 1001;
+.canvas.is-open {
+  z-index: 101;
 }
 /* Direction */
-.Canvas--top,
-.Canvas--bottom,
-.Canvas--left {
+.canvas--top,
+.canvas--bottom,
+.canvas--left {
   left: 0;
 }
-.Canvas--right {
+.canvas--right {
   right: 0;
 }
-.Canvas--top,
-.Canvas--right,
-.Canvas--left {
+.canvas--top,
+.canvas--right,
+.canvas--left {
   top: 0;
 }
-.Canvas--left,
-.Canvas--right,
-.Canvas--bottom {
+.canvas--left,
+.canvas--right,
+.canvas--bottom {
   bottom: 0;
 }
 /* Sizing */
-.Canvas--top,
-.Canvas--right,
-.Canvas--bottom,
-.Canvas--left {
+.canvas--top,
+.canvas--right,
+.canvas--bottom,
+.canvas--left {
   width: 100%;
 }
-.Canvas--top,
-.Canvas--bottom {
+.canvas--top,
+.canvas--bottom {
   height: 100%;
   max-height: 250px;
 }
-.Canvas--right,
-.Canvas--left {
+.canvas--right,
+.canvas--left {
   max-width: 250px;
 }
-.Canvas.is-fixed {
+.canvas.is-fixed {
   position: fixed;
 }
-.Content > .Canvas.is-open {
-  position: relative;
-  z-index: 999;
-}
-.Canvas--left {
+.canvas--left {
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
 }
-.Canvas--right {
+.canvas--right {
   -webkit-transform: translateX(250px);
           transform: translateX(250px);
 }
-.Canvas--top {
+.canvas--top {
   -webkit-transform: translateY(-250px);
           transform: translateY(-250px);
 }
-.Canvas--bottom {
-  display: none;
-}
-.Canvas--bottom.is-open {
-  display: block;
-}
-.Canvas--left.is-open,
-.Canvas--right.is-open {
+.canvas--left.is-open,
+.canvas--right.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-.Canvas--top.is-open,
-.Canvas--bottom.is-open {
+.canvas--top.is-open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-.Canvas--left.is-mini,
-.Canvas--right.is-mini {
+.canvas--bottom {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.canvas--bottom.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.canvas--left.is-mini,
+.canvas--right.is-mini {
   max-width: 50px;
-}
-.Canvas {
-  background: #fff;
-}
-.is-open.Canvas--top {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-}
-.is-open.Canvas--right {
-  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
-}
-.is-open.Canvas--bottom {
-  box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
-}
-.is-open.Canvas--left {
-  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
-}
-.Content > .Canvas.is-open {
-  box-shadow: none;
 }

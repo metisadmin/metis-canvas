@@ -1,20 +1,27 @@
-.Canvas {
+@import "variable";
+
+@{canvasClass}:not([class*="bg-"]) {
   background: #fff;
 }
+
 .is-open {
-  &.Canvas--top {
+  &@{canvasClass}--top {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   }
-  &.Canvas--right {
+  &@{canvasClass}--right {
     box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
   }
-  &.Canvas--bottom {
+  &@{canvasClass}--bottom {
     box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
   }
-  &.Canvas--left {
+  &@{canvasClass}--left {
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
   }
 }
-.Content .Canvas.is-open {
-    box-shadow: none;
+.content @{canvasClass}.is-open {
+  box-shadow: none;
+}
+.content > @{canvasClass}.is-open {
+  position: relative;
+  z-index: 999;
 }

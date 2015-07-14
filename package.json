@@ -1,12 +1,12 @@
 {
   "name": "metis-canvas",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "basic admin canvas",
   "main": "Brocfile.js",
   "scripts": {
     "clean": "rm -rf ./dist",
     "create": "broccoli build dist",
-    "serve": "broccoli serve",
+    "start": "broccoli serve",
     "build": "npm run clean && npm run create"
   },
   "repository": {

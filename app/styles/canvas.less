@@ -1,108 +1,83 @@
-.Canvas {
+@{canvasClass} {
   transition: transform 0.5s ease-out;
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   overflow-y: auto;
   &.is-open {
-    z-index: 1001;
+    z-index: 101;
   }
 }
 
 /* Direction */
-.Canvas--top,
-.Canvas--bottom,
-.Canvas--left {
+@{canvasClass}--top,
+@{canvasClass}--bottom,
+@{canvasClass}--left {
   left: 0;
 }
-.Canvas--right {
+@{canvasClass}--right {
   right: 0;
 }
-.Canvas--top,
-.Canvas--right,
-.Canvas--left {
+@{canvasClass}--top,
+@{canvasClass}--right,
+@{canvasClass}--left {
   top: 0;
 }
-.Canvas--left,
-.Canvas--right,
-.Canvas--bottom {
+@{canvasClass}--left,
+@{canvasClass}--right,
+@{canvasClass}--bottom {
   bottom: 0;
 }
 
 /* Sizing */
-.Canvas--top,
-.Canvas--right,
-.Canvas--bottom,
-.Canvas--left {
+@{canvasClass}--top,
+@{canvasClass}--right,
+@{canvasClass}--bottom,
+@{canvasClass}--left {
   width: 100%;
 }
-.Canvas--top,
-.Canvas--bottom {
+@{canvasClass}--top,
+@{canvasClass}--bottom {
   height: 100%;
   max-height: @canvasDimension;
 }
-.Canvas--right,
-.Canvas--left {
+@{canvasClass}--right,
+@{canvasClass}--left {
   max-width: @canvasDimension;
 }
-.Canvas.is-fixed {
+@{canvasClass}.is-fixed {
   position: fixed;
 }
-.Content > .Canvas.is-open {
-  position: relative;
-  z-index: 999;
-}
-.Canvas--left {
+
+@{canvasClass}--left {
   transform: translateX(-@canvasDimension);
 }
-.Canvas--right {
+@{canvasClass}--right {
   transform: translateX(@canvasDimension);
 }
-.Canvas--top {
+@{canvasClass}--top {
   transform: translateY(-@canvasDimension);
 }
-.Canvas--bottom {
-  display: none;
-  &.is-open {
-      display: block;
-  }
-}
-.Canvas--left,
-.Canvas--right {
+
+@{canvasClass}--left,
+@{canvasClass}--right {
   &.is-open {
     transform: translateX(0);
   }
 }
-.Canvas--top,
-.Canvas--bottom {
+@{canvasClass}--top {
   &.is-open {
     transform: translateY(0);
   }
 }
-
-.Canvas--left,
-.Canvas--right {
+@{canvasClass}--bottom {
+  transform: translateX(-100%);
+  &.is-open {
+      transform: translateX(0);
+  }
+}
+@{canvasClass}--left,
+@{canvasClass}--right {
   &.is-mini {
     max-width: 50px;
   }
-}
-
-.Canvas {
-  background: #fff;
-}
-.is-open {
-  &.Canvas--top {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  }
-  &.Canvas--right {
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
-  }
-  &.Canvas--bottom {
-    box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
-  }
-  &.Canvas--left {
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
-  }
-}
-.Content > .Canvas.is-open {
-    box-shadow: none;
 }
