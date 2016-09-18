@@ -1,5 +1,5 @@
 /**
-* metis-canvas v0.2.2
+* metis-canvas v0.2.3
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2016
@@ -9,16 +9,16 @@
 .canvas:not([class*="bg-"]) {
   background: #fff;
 }
-.is-open.canvas--top {
+.is-open.canvas-top {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
-.is-open.canvas--right {
+.is-open.canvas-right {
   box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
 }
-.is-open.canvas--bottom {
+.is-open.canvas-bottom {
   box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
 }
-.is-open.canvas--left {
+.is-open.canvas-left {
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
 }
 .content .canvas.is-open {

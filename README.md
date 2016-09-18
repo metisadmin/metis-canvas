@@ -1,6 +1,6 @@
 # metis-canvas
 
-[![NPM version](https://badge.fury.io/js/metis-canvas.svg)](http://badge.fury.io/js/metis-canvas) [![Bower version](https://badge.fury.io/bo/metis-canvas.svg)](http://badge.fury.io/bo/metis-canvas) [![PHP version](https://badge.fury.io/ph/metisadmin%2Fmetis-canvas.svg)](http://badge.fury.io/ph/metisadmin%2Fmetis-canvas)  [![Build Status](https://travis-ci.org/metisadmin/metis-canvas.svg)](https://travis-ci.org/metisadmin/metis-canvas) 
+[![NPM version](https://badge.fury.io/js/metis-canvas.svg)](http://badge.fury.io/js/metis-canvas) [![Bower version](https://badge.fury.io/bo/metis-canvas.svg)](http://badge.fury.io/bo/metis-canvas) [![PHP version](https://badge.fury.io/ph/metisadmin%2Fmetis-canvas.svg)](http://badge.fury.io/ph/metisadmin%2Fmetis-canvas)  [![Build Status](https://travis-ci.org/metisadmin/metis-canvas.svg)](https://travis-ci.org/metisadmin/metis-canvas)
 
 > basic admin canvas
 
@@ -37,7 +37,7 @@ git clone https://github.com/metisadmin/metis-canvas.git
 cd metis-canvas
 npm install
 bower install
-broccoli start
+BROCCOLI_ENV=develop broccoli serve
 ```
 ## Author
 

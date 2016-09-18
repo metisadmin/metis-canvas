@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin canvas test</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="normalize-css/normalize.css">
   <link rel="stylesheet" href="metis-base/dist/metis-base.css">
   <link rel="stylesheet" href="metis-base/dist/metis-base-theme.css">
   <link rel="stylesheet" href="metis-layout/dist/metis-layout.css">
@@ -17,23 +17,23 @@
 
 <body>
   <div class="Wrap">
-    <header class="canvas canvas--top" id="pT">
+    <header class="canvas canvas-top" id="pT">
       <a href="#pT" data-toggle="canvas">Close</a>
     </header>
-    <aside class="canvas canvas--left" id="pL">
+    <aside class="canvas canvas-left" id="pL">
       <a href="#pL" data-toggle="canvas">Close</a>
     </aside>
     <header class="Top">
       <p>
         TOP
       </p>
-      <a href="#pB" data-toggle="canvas">canvas--bottom</a>
-      <a href="#pL" data-toggle="canvas">canvas--left</a>
-      <a href="#pT" data-toggle="canvas">canvas--top</a>
-      <a href="#pR" data-toggle="canvas">canvas--right</a>
+      <a href="#pB" data-toggle="canvas">canvas-bottom</a>
+      <a href="#pL" data-toggle="canvas">canvas-left</a>
+      <a href="#pT" data-toggle="canvas">canvas-top</a>
+      <a href="#pR" data-toggle="canvas">canvas-right</a>
     </header>
     <div class="content">
-      <aside class="canvas canvas--left is-open bg-blue">
+      <aside class="canvas canvas-left is-open bg-blue">
         <nav>
           <ul>
             <li><a href="#">item 1</a></li>
@@ -55,15 +55,15 @@
         FOOTER
       </p>
     </footer>
-    <aside class="canvas canvas--right" id="pR">
+    <aside class="canvas canvas-right is-fixed" id="pR">
       <a href="#pR" data-toggle="canvas">Close</a>
     </aside>
-    <header class="canvas canvas--bottom" id="pB">
+    <header class="canvas canvas-bottom is-fixed" id="pB">
       <a href="#pB" data-toggle="canvas">Close</a>
     </header>
   </div>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="jquery/dist/jquery.js"></script>
   <script src="metis-base/dist/metis-base.js"></script>
   <script src="metis-layout/dist/metis-layout.js"></script>
   <script src=metis-canvas.js></script>

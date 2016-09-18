@@ -1,32 +1,36 @@
 {
-    "name": "metis-canvas",
-    "homepage": "https://github.com/metisadmin/metis-canvas",
-    "authors": [
-        "Osman Nuri Okumuş <onokumus@gmail.com>"
-    ],
-    "description": "basic admin canvas",
-    "main": [
-        "dist/metis-canvas.css",
-        "dist/metis-canvas.js"
-    ],
-    "moduleType": [
-        "node"
-    ],
-    "keywords": [
-        "admin",
-        "canvas",
-        "flexbox"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "app",
-        "public",
-        "tmp"
-    ],
-    "dependencies": {
-        "jquery": "^2.2.4"
-    }
+  "name": "metis-canvas",
+  "homepage": "https://github.com/metisadmin/metis-canvas",
+  "authors": [
+    "Osman Nuri Okumuş <onokumus@gmail.com>"
+  ],
+  "description": "basic admin canvas",
+  "main": [
+    "dist/metis-canvas.css",
+    "dist/metis-canvas.js"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "admin",
+    "canvas",
+    "flexbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app",
+    "public",
+    "tmp"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "metis-layout": "^0.1.7"
+  }
 }

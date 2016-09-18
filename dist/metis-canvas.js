@@ -1,5 +1,5 @@
 /**
-* metis-canvas v0.2.2
+* metis-canvas v0.2.3
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2016
