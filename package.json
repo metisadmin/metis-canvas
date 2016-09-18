@@ -1,6 +1,6 @@
 {
   "name": "metis-canvas",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "basic admin canvas",
   "main": "Brocfile.js",
   "scripts": {

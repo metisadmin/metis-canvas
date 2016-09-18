@@ -1,4 +1,4 @@
-.@{canvasClass} {
+@{canvasClass} {
   transition: transform 0.3s ease-out;
   position: absolute;
   z-index: 1030;
@@ -9,68 +9,68 @@
 }
 
 /* Direction */
-.@{canvasClass}-top,
-.@{canvasClass}-bottom,
-.@{canvasClass}-left {
+@{canvasClass}-top,
+@{canvasClass}-bottom,
+@{canvasClass}-left {
   left: 0;
 }
-.@{canvasClass}-right {
+@{canvasClass}-right {
   right: 0;
 }
-.@{canvasClass}-top,
-.@{canvasClass}-right,
-.@{canvasClass}-left {
+@{canvasClass}-top,
+@{canvasClass}-right,
+@{canvasClass}-left {
   top: 0;
 }
-.@{canvasClass}-left,
-.@{canvasClass}-right,
-.@{canvasClass}-bottom {
+@{canvasClass}-left,
+@{canvasClass}-right,
+@{canvasClass}-bottom {
   bottom: 0;
 }
 
 /* Sizing */
-.@{canvasClass}-top,
-.@{canvasClass}-right,
-.@{canvasClass}-bottom,
-.@{canvasClass}-left {
+@{canvasClass}-top,
+@{canvasClass}-right,
+@{canvasClass}-bottom,
+@{canvasClass}-left {
   width: 100%;
 }
-.@{canvasClass}-top,
-.@{canvasClass}-bottom {
+@{canvasClass}-top,
+@{canvasClass}-bottom {
   max-height: @canvasDimension;
 }
-.@{canvasClass}-right,
-.@{canvasClass}-left {
+@{canvasClass}-right,
+@{canvasClass}-left {
   max-width: @canvasDimension;
 }
-.@{canvasClass}.is-fixed {
+@{canvasClass}.is-fixed {
   position: fixed;
 }
 
-.@{canvasClass}-left {
+@{canvasClass}-left {
   transform: translateX(-@canvasDimension);
 }
-.@{canvasClass}-right {
+@{canvasClass}-right {
   transform: translateX(@canvasDimension);
 }
 
 
-.@{canvasClass}-left,
-.@{canvasClass}-right {
+@{canvasClass}-left,
+@{canvasClass}-right {
   &.is-open {
     transform: translateX(0);
   }
 }
 
-.@{canvasClass}-top,
-.@{canvasClass}-bottom {
+@{canvasClass}-top,
+@{canvasClass}-bottom {
   transform: translateX(-100%);
   &.is-open {
       transform: translateX(0);
   }
 }
-.@{canvasClass}-left,
-.@{canvasClass}-right {
+@{canvasClass}-left,
+@{canvasClass}-right {
   &.is-mini {
     max-width: @canvasMiniDimension;
   }

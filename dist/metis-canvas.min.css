@@ -1,9 +1,9 @@
 /**
-* metis-canvas v0.2.0
+* metis-canvas v0.2.2
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2016
 * Licensed under MIT
 */
 
-..canvas{transition:transform .3s ease-out;position:absolute;z-index:1030;overflow-y:auto}..canvas.is-open{z-index:1031}..canvas-top,..canvas-bottom,..canvas-left{left:0}..canvas-right{right:0}..canvas-top,..canvas-right,..canvas-left{top:0}..canvas-left,..canvas-right,..canvas-bottom{bottom:0}..canvas-top,..canvas-right,..canvas-bottom,..canvas-left{width:100%}..canvas-top,..canvas-bottom{max-height:250px}..canvas-right,..canvas-left{max-width:250px}..canvas.is-fixed{position:fixed}..canvas-left{transform:translateX(-250px)}..canvas-right{transform:translateX(250px)}..canvas-left.is-open,..canvas-right.is-open{transform:translateX(0)}..canvas-top,..canvas-bottom{transform:translateX(-100%)}..canvas-top.is-open,..canvas-bottom.is-open{transform:translateX(0)}..canvas-left.is-mini,..canvas-right.is-mini{max-width:60px}
+.canvas{transition:transform .3s ease-out;position:absolute;z-index:1030;overflow-y:auto}.canvas.is-open{z-index:1031}.canvas-top,.canvas-bottom,.canvas-left{left:0}.canvas-right{right:0}.canvas-top,.canvas-right,.canvas-left{top:0}.canvas-left,.canvas-right,.canvas-bottom{bottom:0}.canvas-top,.canvas-right,.canvas-bottom,.canvas-left{width:100%}.canvas-top,.canvas-bottom{max-height:250px}.canvas-right,.canvas-left{max-width:250px}.canvas.is-fixed{position:fixed}.canvas-left{transform:translateX(-250px)}.canvas-right{transform:translateX(250px)}.canvas-left.is-open,.canvas-right.is-open{transform:translateX(0)}.canvas-top,.canvas-bottom{transform:translateX(-100%)}.canvas-top.is-open,.canvas-bottom.is-open{transform:translateX(0)}.canvas-left.is-mini,.canvas-right.is-mini{max-width:60px}
