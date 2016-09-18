@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
   'use strict';
 
   var MetisCanvas = function(element, options) {
@@ -97,7 +97,7 @@
   $.fn.canvas = Plugin;
   $.fn.canvas.Constructor = MetisCanvas;
 
-  // COLLAPSE NO CONFLICT
+  // CANVAS NO CONFLICT
   // ====================
 
   $.fn.canvas.noConflict = function() {

@@ -4,7 +4,7 @@ var banner = '/**\n' +
   '* ' + packageJson.name + ' v' + packageJson.version + '\n' +
   '* Homepage : ' + packageJson.homepage + '\n' +
   '* Author : ' + packageJson.author + '\n' +
-  '* Copyright 2015\n' +
+  '* Copyright 2016\n' +
   '* Licensed under ' + packageJson.license + '\n' +
   '*/\n';
 
@@ -102,13 +102,17 @@ var uglifyScriptsBanner = concat(uglifyScripts, {
   header: banner
 });
 
-module.exports = mergeTrees([
-  bowerFiles,
-  publicFolder,
+var tree = [
   concatenatedLess,
   concatenatedLessMin,
   themeConcatenatedLess,
   themeConcatenatedLessMin,
   concatenatedScripts,
   uglifyScriptsBanner
-]);
+];
+
+if (process.env.BROCCOLI_ENV === 'develop') {
+  tree.push(bowerFiles, publicFolder);
+}
+
+module.exports = mergeTrees(tree);

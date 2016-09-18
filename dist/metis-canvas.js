@@ -1,12 +1,12 @@
 /**
-* metis-canvas v0.1.5
+* metis-canvas v0.2.0
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
-* Copyright 2015
+* Copyright 2016
 * Licensed under MIT
 */
 
-(function($) {
+;(function($) {
   'use strict';
 
   var MetisCanvas = function(element, options) {
@@ -105,7 +105,7 @@
   $.fn.canvas = Plugin;
   $.fn.canvas.Constructor = MetisCanvas;
 
-  // COLLAPSE NO CONFLICT
+  // CANVAS NO CONFLICT
   // ====================
 
   $.fn.canvas.noConflict = function() {
@@ -127,3 +127,4 @@
     Plugin.call($target, option);
   });
 })(jQuery);
+//# sourceMappingURL=metis-canvas.map

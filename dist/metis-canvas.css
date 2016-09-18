@@ -1,89 +1,76 @@
 /**
-* metis-canvas v0.1.5
+* metis-canvas v0.2.0
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
-* Copyright 2015
+* Copyright 2016
 * Licensed under MIT
 */
 
-.canvas {
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
+..canvas {
+  transition: transform 0.3s ease-out;
   position: absolute;
-  z-index: 100;
+  z-index: 1030;
   overflow-y: auto;
 }
-.canvas.is-open {
-  z-index: 101;
+..canvas.is-open {
+  z-index: 1031;
 }
 /* Direction */
-.canvas--top,
-.canvas--bottom,
-.canvas--left {
+..canvas-top,
+..canvas-bottom,
+..canvas-left {
   left: 0;
 }
-.canvas--right {
+..canvas-right {
   right: 0;
 }
-.canvas--top,
-.canvas--right,
-.canvas--left {
+..canvas-top,
+..canvas-right,
+..canvas-left {
   top: 0;
 }
-.canvas--left,
-.canvas--right,
-.canvas--bottom {
+..canvas-left,
+..canvas-right,
+..canvas-bottom {
   bottom: 0;
 }
 /* Sizing */
-.canvas--top,
-.canvas--right,
-.canvas--bottom,
-.canvas--left {
+..canvas-top,
+..canvas-right,
+..canvas-bottom,
+..canvas-left {
   width: 100%;
 }
-.canvas--top,
-.canvas--bottom {
-  height: 100%;
+..canvas-top,
+..canvas-bottom {
   max-height: 250px;
 }
-.canvas--right,
-.canvas--left {
+..canvas-right,
+..canvas-left {
   max-width: 250px;
 }
-.canvas.is-fixed {
+..canvas.is-fixed {
   position: fixed;
 }
-.canvas--left {
-  -webkit-transform: translateX(-250px);
-          transform: translateX(-250px);
+..canvas-left {
+  transform: translateX(-250px);
 }
-.canvas--right {
-  -webkit-transform: translateX(250px);
-          transform: translateX(250px);
+..canvas-right {
+  transform: translateX(250px);
 }
-.canvas--top {
-  -webkit-transform: translateY(-250px);
-          transform: translateY(-250px);
+..canvas-left.is-open,
+..canvas-right.is-open {
+  transform: translateX(0);
 }
-.canvas--left.is-open,
-.canvas--right.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+..canvas-top,
+..canvas-bottom {
+  transform: translateX(-100%);
 }
-.canvas--top.is-open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+..canvas-top.is-open,
+..canvas-bottom.is-open {
+  transform: translateX(0);
 }
-.canvas--bottom {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-.canvas--bottom.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-.canvas--left.is-mini,
-.canvas--right.is-mini {
-  max-width: 50px;
+..canvas-left.is-mini,
+..canvas-right.is-mini {
+  max-width: 60px;
 }
