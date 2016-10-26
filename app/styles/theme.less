@@ -4,24 +4,6 @@
   background: #fff;
 }
 
-.is-open {
-  &@{canvasClass}-top {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  }
-  &@{canvasClass}-right {
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.25);
-  }
-  &@{canvasClass}-bottom {
-    box-shadow: 2px -3px 10px rgba(0, 0, 0, 0.25);
-  }
-  &@{canvasClass}-left {
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
-  }
-}
-.content @{canvasClass}.is-open {
-  box-shadow: none;
-}
-.content > @{canvasClass}.is-open {
-  position: relative;
-  z-index: 999;
+.bg-transparent {
+  background-color: rgba(0, 0, 0, .8);
 }

@@ -19,7 +19,9 @@ var autoprefixPlugin = new LessPluginAutoPrefix({
   browsers: ['last 2 versions', 'ie 10']
 });
 
-var bowerFiles = funnel('bower_components');
+var jqueryFiles = funnel('node_modules/jquery/dist');
+var tetherFiles = funnel('node_modules/tether/dist');
+var bootstrapFiles = funnel('node_modules/bootstrap/dist');
 var publicFolder = funnel('public');
 var projectFiles = funnel('app');
 var scriptFiles = funnel(projectFiles, {
@@ -112,7 +114,7 @@ var tree = [
 ];
 
 if (process.env.BROCCOLI_ENV === 'develop') {
-  tree.push(bowerFiles, publicFolder);
+  tree.push(jqueryFiles, tetherFiles, bootstrapFiles, publicFolder);
 }
 
 module.exports = mergeTrees(tree);

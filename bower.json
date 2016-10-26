@@ -28,9 +28,5 @@
   ],
   "dependencies": {
     "jquery": "^2.2.4"
-  },
-  "devDependencies": {
-    "normalize-css": "normalize.css#^4.2.0",
-    "metis-layout": "^0.1.7"
   }
 }

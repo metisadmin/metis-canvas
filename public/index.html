@@ -5,56 +5,297 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin canvas test</title>
-  <link rel="stylesheet" href="normalize-css/normalize.css">
-  <link rel="stylesheet" href="metis-base/dist/metis-base.css">
-  <link rel="stylesheet" href="metis-base/dist/metis-base-theme.css">
-  <link rel="stylesheet" href="metis-layout/dist/metis-layout.css">
-  <link rel="stylesheet" href="metis-layout/dist/metis-layout-theme.css">
+  <title>metis-canvas test</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="metis-canvas.css">
   <link rel="stylesheet" href="metis-canvas-theme.css">
 </head>
 
 <body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">metis-canvas</h1>
+      <p class="lead">A jQuery off-canvas Plugin</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">Page Canvas</h4>
+            <p class="card-text">position: fixed</p>
+          </div>
+          <nav class="nav nav-pills nav-stacked">
+            <a class="nav-link" href="#cft" data-toggle="canvas">Top</a>
+            <a class="nav-link" href="#cfr" data-toggle="canvas">Right</a>
+            <a class="nav-link" href="#cfb" data-toggle="canvas">Bottom</a>
+            <a class="nav-link" href="#cfl" data-toggle="canvas">Left</a>
+            <a class="nav-link" href="#cff" data-toggle="canvas">Full</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-xs-12">
+            <pre>
+<code>&lt;div class=&quot;canvas is-fixed is-top&quot; id=&quot;cft&quot;&gt;
+  &lt;h1&gt;Top Canvas&lt;/h1&gt;
+  &lt;button class=&quot;btn btn-danger&quot; name=&quot;button&quot; data-toggle=&quot;canvas&quot; data-target=&quot;#cft&quot;&gt;CLOSE&lt;/button&gt;
+&lt;/div&gt;</code>
+            </pre>
+            <pre>
+<code>&lt;div class=&quot;canvas is-fixed is-right&quot; id=&quot;cfr&quot;&gt;
+  &lt;h1&gt;Right Canvas&lt;/h1&gt;
+  &lt;button class=&quot;btn btn-danger&quot; name=&quot;button&quot; data-toggle=&quot;canvas&quot; data-target=&quot;#cfr&quot;&gt;CLOSE&lt;/button&gt;
+&lt;/div&gt;</code>
+            </pre>
+            <pre>
+<code>&lt;div class=&quot;canvas is-fixed is-bottom&quot; id=&quot;cfb&quot;&gt;
+  &lt;h1&gt;Bottom Canvas&lt;/h1&gt;
+  &lt;button class=&quot;btn btn-danger&quot; name=&quot;button&quot; data-toggle=&quot;canvas&quot; data-target=&quot;#cfb&quot;&gt;CLOSE&lt;/button&gt;
+&lt;/div&gt;</code>
+            </pre>
+            <pre>
+<code>&lt;div class=&quot;canvas is-fixed is-left&quot; id=&quot;cfl&quot;&gt;
+  &lt;h1&gt;Left Canvas&lt;/h1&gt;
+  &lt;button class=&quot;btn btn-danger&quot; name=&quot;button&quot; data-toggle=&quot;canvas&quot; data-target=&quot;#cfl&quot;&gt;CLOSE&lt;/button&gt;
+&lt;/div&gt;</code>
+            </pre>
+            <pre>
+<code>&lt;div class=&quot;canvas is-fixed&quot; id=&quot;cff&quot;&gt;
+  &lt;h1&gt;Full Canvas&lt;/h1&gt;
+  &lt;button class=&quot;btn btn-danger&quot; name=&quot;button&quot; data-toggle=&quot;canvas&quot; data-target=&quot;#cff&quot;&gt;CLOSE&lt;/button&gt;
+&lt;/div&gt;</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">Card Canvas</h4>
+            <p class="card-text">position: absolute</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Top Canvas</h4>
+              </div>
+              <div class="canvas-container">
+                <figure class="figure">
+                  <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                  <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                </figure>
+                <div class="canvas is-top p-2 bg-info" id="cat">
+                  <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#cat">
+                    CLOSE
+                  </button>
+                </div>
+              </div>
+              <div class="card card-block">
+                <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#cat">
+                  OPEN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Right Canvas</h4>
+              </div>
+              <div class="canvas-container">
+                <figure class="figure">
+                  <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                  <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                </figure>
+                <div class="canvas is-right p-2 bg-info" id="car">
+                  <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#car">
+                    CLOSE
+                  </button>
+                </div>
+              </div>
+              <div class="card card-block">
+                <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#car">
+                  OPEN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Bottom Canvas</h4>
+              </div>
+              <div class="canvas-container">
+                <figure class="figure">
+                  <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                  <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                </figure>
+                <div class="canvas is-bottom p-2 bg-info" id="cab">
+                  <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#cab">
+                    CLOSE
+                  </button>
+                </div>
+              </div>
+              <div class="card card-block">
+                <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#cab">
+                  OPEN
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Left Canvas</h4>
+              </div>
+              <div class="canvas-container">
+                <figure class="figure">
+                  <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                  <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                </figure>
+                <div class="canvas is-left p-2 bg-info" id="cal">
+                  <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#cal">
+                    CLOSE
+                  </button>
+                </div>
+              </div>
+              <div class="card card-block">
+                <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#cal">
+                  OPEN
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-block">
+                  <h4 class="card-title">Center Canvas</h4>
+                </div>
+                <div class="canvas-container">
+                  <figure class="figure">
+                    <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                    <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                  </figure>
+                  <div class="canvas is-center p-2 bg-info" id="cac">
+                    <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#cac">
+                      CLOSE
+                    </button>
+                  </div>
+                </div>
+                <div class="card card-block">
+                  <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#cac">
+                    OPEN
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-block">
+                    <h4 class="card-title">Full Canvas</h4>
+                  </div>
+                  <div class="canvas-container">
+                    <figure class="figure">
+                      <img src="http://placehold.it/350x150" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                      <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <div class="canvas p-2 bg-info" id="caf">
+                      <button type="button" class="btn btn-danger" data-toggle="canvas" data-target="#caf">
+                        CLOSE
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card card-block">
+                    <button type="button" class="btn btn-primary" data-toggle="canvas" data-target="#caf">
+                      OPEN
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-sm-3">
+
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Hoverable Canvas</h4>
+              <p class="card-text">position: absolute</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">Hoverable Canvas</h4>
+          </div>
+          <div class="canvas-container">
+            <figure class="figure">
+              <img src="http://placehold.it/1250x200" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="p-1 figure-caption">A caption for the above image.</figcaption>
+            </figure>
+            <div class="canvas is-hoverable p-2 bg-transparent">
+              <div class="text-xs-center text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+          </div>
+          <div class="card card-block">
+            lorem ipsum ...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="Wrap">
+
+
+
+    <div class="canvas canvas-left" id="fC">
+      <h1>Full Canvas</h1>
+      <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#fC">CLOSE</button>
+    </div>
     <header class="canvas canvas-top" id="pT">
       <a href="#pT" data-toggle="canvas">Close</a>
     </header>
-    <aside class="canvas canvas-left" id="pL">
+    <aside class="canvas is-left" id="pL">
       <a href="#pL" data-toggle="canvas">Close</a>
     </aside>
-    <header class="Top">
-      <p>
-        TOP
-      </p>
-      <a href="#pB" data-toggle="canvas">canvas-bottom</a>
-      <a href="#pL" data-toggle="canvas">canvas-left</a>
-      <a href="#pT" data-toggle="canvas">canvas-top</a>
-      <a href="#pR" data-toggle="canvas">canvas-right</a>
-    </header>
-    <div class="content">
-      <aside class="canvas canvas-left is-open bg-blue">
-        <nav>
-          <ul>
-            <li><a href="#">item 1</a></li>
-            <li><a href="#">item 2</a></li>
-            <li><a href="#">item 3</a></li>
-            <li><a href="#">item 4</a></li>
-            <li><a href="#">item 5</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section class="Main">
-        <p>
-          MAIN
-        </p>
-      </section>
-    </div>
-    <footer class="Footer">
-      <p>
-        FOOTER
-      </p>
-    </footer>
+
+
     <aside class="canvas canvas-right is-fixed" id="pR">
       <a href="#pR" data-toggle="canvas">Close</a>
     </aside>
@@ -63,9 +304,36 @@
     </header>
   </div>
 
-  <script src="jquery/dist/jquery.js"></script>
-  <script src="metis-base/dist/metis-base.js"></script>
-  <script src="metis-layout/dist/metis-layout.js"></script>
+
+
+  <div class="canvas is-fixed is-top" id="cft">
+    <h1>Top Canvas</h1>
+    <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#cft">CLOSE</button>
+  </div>
+
+  <div class="canvas is-fixed is-right" id="cfr">
+    <h1>Right Canvas</h1>
+    <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#cfr">CLOSE</button>
+  </div>
+
+  <div class="canvas is-fixed is-bottom" id="cfb">
+    <h1>Bottom Canvas</h1>
+    <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#cfb">CLOSE</button>
+  </div>
+
+  <div class="canvas is-fixed is-left" id="cfl">
+    <h1>Left Canvas</h1>
+    <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#cfl">CLOSE</button>
+  </div>
+
+  <div class="canvas is-fixed" id="cff">
+    <h1>Full Canvas</h1>
+    <button class="btn btn-danger" name="button" data-toggle="canvas" data-target="#cff">CLOSE</button>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src=metis-canvas.js></script>
 </body>
 

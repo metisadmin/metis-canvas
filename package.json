@@ -1,7 +1,7 @@
 {
   "name": "metis-canvas",
-  "version": "0.2.3",
-  "description": "basic admin canvas",
+  "version": "1.0.0",
+  "description": "basic off canvas",
   "main": "dist/metis-canvas.js",
   "style": "dist/metis-canvas.css",
   "files": [
@@ -27,12 +27,16 @@
   },
   "homepage": "https://github.com/metisadmin/metis-canvas",
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
     "broccoli": "^0.16.9",
-    "broccoli-concat": "^2.3.4",
-    "broccoli-funnel": "^1.0.6",
+    "broccoli-concat": "^3.0.5",
+    "broccoli-funnel": "^1.0.7",
     "broccoli-less-single": "^0.6.3",
     "broccoli-merge-trees": "^1.1.4",
     "broccoli-uglify-js": "^0.2.0",
     "less-plugin-autoprefix": "^1.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
   }
 }

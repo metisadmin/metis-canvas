@@ -1,75 +1,62 @@
 /**
-* metis-canvas v0.2.3
+* metis-canvas v1.0.0
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2016
 * Licensed under MIT
 */
 
+.canvas-container {
+  position: relative;
+  overflow: hidden;
+}
 .canvas {
-  transition: transform 0.3s ease-out;
   position: absolute;
-  z-index: 1030;
-}
-.canvas.is-open {
-  z-index: 1031;
-}
-/* Direction */
-.canvas-top,
-.canvas-bottom,
-.canvas-left {
-  left: 0;
-}
-.canvas-right {
-  right: 0;
-}
-.canvas-top,
-.canvas-right,
-.canvas-left {
   top: 0;
-}
-.canvas-left,
-.canvas-right,
-.canvas-bottom {
+  right: 0;
   bottom: 0;
-}
-/* Sizing */
-.canvas-top,
-.canvas-right,
-.canvas-bottom,
-.canvas-left {
-  width: 100%;
-}
-.canvas-top,
-.canvas-bottom {
-  max-height: 250px;
-}
-.canvas-right,
-.canvas-left {
-  max-width: 250px;
+  left: 0;
+  margin: auto;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease-out;
+  /**
+   * 1. Make sure fixed elements are promoted into a new layer, for performance
+   *    reasons.
+   */
 }
 .canvas.is-fixed {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /* 1 */
   position: fixed;
 }
-.canvas-left {
-  transform: translateX(-250px);
+.canvas.is-center {
+  bottom: auto;
+  transform: translate(0, -100%);
 }
-.canvas-right {
-  transform: translateX(250px);
+.canvas.is-center.is-open {
+  top: 50%;
+  transform: translate(0, -50%);
 }
-.canvas-left.is-open,
-.canvas-right.is-open {
-  transform: translateX(0);
+.canvas.is-top {
+  bottom: auto;
+  transform: translate(0, -100%);
 }
-.canvas-top,
-.canvas-bottom {
-  transform: translateX(-100%);
+.canvas.is-bottom {
+  top: auto;
+  transform: translate(0, 100%);
 }
-.canvas-top.is-open,
-.canvas-bottom.is-open {
-  transform: translateX(0);
+.canvas.is-right {
+  left: auto;
+  transform: translate(100%, 0);
 }
-.canvas-left.is-mini,
-.canvas-right.is-mini {
-  max-width: 60px;
+.canvas.is-left {
+  right: auto;
+  transform: translate(-100%, 0);
+}
+.canvas.is-open {
+  transform: translate(0);
+}
+.canvas-container:hover .canvas.is-hoverable {
+  transform: translate(0);
 }
