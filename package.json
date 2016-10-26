@@ -1,6 +1,6 @@
 {
   "name": "metis-canvas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "basic off canvas",
   "main": "dist/metis-canvas.js",
   "style": "dist/metis-canvas.css",

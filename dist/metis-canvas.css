@@ -1,5 +1,5 @@
 /**
-* metis-canvas v1.0.0
+* metis-canvas v1.0.1
 * Homepage : https://github.com/metisadmin/metis-canvas
 * Author : Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
 * Copyright 2016
@@ -59,4 +59,8 @@
 }
 .canvas-container:hover .canvas.is-hoverable {
   transform: translate(0);
+}
+.canvas-container:hover .canvas.is-center.is-hoverable {
+  top: 50%;
+  transform: translate(0, -50%);
 }
